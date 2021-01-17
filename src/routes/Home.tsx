@@ -73,7 +73,7 @@ function Home() {
           <Collection>
             <Name>유도혁</Name>
             <About>주로 React와 TypeScript로 프론트 개발을 하고있습니다.</About>
-            <DetailLink to="/detail">
+            <DetailLink to="/about">
               <GoButton>저에 대해서</GoButton>
             </DetailLink>
           </Collection>
