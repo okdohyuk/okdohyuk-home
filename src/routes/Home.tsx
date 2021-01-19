@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
+import { keyframes } from '@emotion/react';
 
 import MyProfile from '../lib/image/myprofile.jpg';
+
+const Rotation = keyframes`
+  from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+`;
 
 const MainWrap = styled.div`
   width: 100vw;
@@ -53,19 +63,52 @@ const GoButton = styled.button`
   color: #ffffff;
 `;
 
-const ImgWrap = styled.figure`
+const ProfileWrap = styled.div`
+  height: 21.5rem;
+  width: 21.5rem;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+`;
+
+const ProfileAnimate = styled.div`
+  height: 21.5rem;
+  width: 21.5rem;
+  border-radius: 9000px;
+  background: linear-gradient(180deg, #b83b5e 80%, #6a2c70);
+`;
+
+const ActiveProfileAnimate = styled.div`
+  height: 21.5rem;
+  width: 21.5rem;
+  border-radius: 9000px;
+  background: linear-gradient(180deg, #b83b5e 80%, #6a2c70);
+  animation: ${Rotation} infinite 3s linear;
+`;
+
+const ImgWrap = styled.div`
+  position: absolute;
+  border-radius: 9000px;
+  background-color: black;
+  padding: 3px;
+`;
+
+const ImgFigure = styled.figure`
   height: 20rem;
   width: 20rem;
-  margin: 0 auto;
+  border-radius: 9000px;
+  overflow: hidden;
+  background-color: transparent;
 `;
 
 const Profile = styled.img`
   width: 100%;
-  height: 100%;
-  border-radius: 9000px !important;
 `;
 
 function Home() {
+  const [onMouse, setOnMouse] = useState(false);
   return (
     <MainWrap>
       <ContentsWrap>
@@ -79,9 +122,21 @@ function Home() {
           </Collection>
         </LeftWrap>
         <RightWrap>
-          <ImgWrap>
-            <Profile src={MyProfile} alt="유도혁" />
-          </ImgWrap>
+          <ProfileWrap
+            onMouseEnter={() => setOnMouse(true)}
+            onMouseLeave={() => setOnMouse(false)}
+          >
+            {onMouse ? (
+              <ActiveProfileAnimate></ActiveProfileAnimate>
+            ) : (
+              <ProfileAnimate></ProfileAnimate>
+            )}
+            <ImgWrap>
+              <ImgFigure>
+                <Profile src={MyProfile} alt={MyProfile} />
+              </ImgFigure>
+            </ImgWrap>
+          </ProfileWrap>
         </RightWrap>
       </ContentsWrap>
     </MainWrap>
