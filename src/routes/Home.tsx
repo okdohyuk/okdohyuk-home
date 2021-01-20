@@ -22,51 +22,70 @@ const MainWrap = styled.div`
 `;
 
 const ContentsWrap = styled.div`
-  display: table-cell;
-  vertical-align: middle;
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  @media screen and (min-width: 900px) {
+    flex-direction: row-reverse;
+  }
 `;
 
 const LeftWrap = styled.div`
-  width: 50%;
-  float: left;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: 900px) {
+    flex: 1;
+  }
 `;
 
 const RightWrap = styled.div`
-  width: 50%;
-  float: right;
+  padding: 15px;
+  display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 900px) {
+    flex: 1;
+  }
 `;
 
 const Collection = styled.div`
-  width: 300px;
-  margin: 0 auto;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 `;
 
-const Name = styled.h2`
-  margin-top: 50px;
+const Name = styled.h1`
+  font-size: 25px;
 `;
 
 const About = styled.div`
   width: 300px;
-  margin: 30px 0;
+  margin: 10px 0;
   font-size: 20px;
 `;
 
-const DetailLink = styled(Link)``;
-
-const GoButton = styled.button`
+const DetailLink = styled(Link)`
+  width: 69px;
+  display: block;
   padding: 7px;
+  text-decoration: none;
   border-radius: 3px;
   border-width: 0;
+  text-align: center;
   background-color: #3499db;
   color: #ffffff;
+  font-size: 15px;
 `;
 
 const ProfileWrap = styled.div`
   height: 21.5rem;
   width: 21.5rem;
-  margin: 0 auto;
+  padding: 20px 0;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -112,15 +131,6 @@ function Home() {
   return (
     <MainWrap>
       <ContentsWrap>
-        <LeftWrap>
-          <Collection>
-            <Name>유도혁</Name>
-            <About>주로 React와 TypeScript로 프론트 개발을 하고있습니다.</About>
-            <DetailLink to="/about">
-              <GoButton>저에 대해서</GoButton>
-            </DetailLink>
-          </Collection>
-        </LeftWrap>
         <RightWrap>
           <ProfileWrap
             onMouseEnter={() => setOnMouse(true)}
@@ -138,6 +148,13 @@ function Home() {
             </ImgWrap>
           </ProfileWrap>
         </RightWrap>
+        <LeftWrap>
+          <Collection>
+            <Name>유도혁</Name>
+            <About>주로 React와 TypeScript로 프론트 개발을 하고있습니다.</About>
+            <DetailLink to="/about">저에 대해서</DetailLink>
+          </Collection>
+        </LeftWrap>
       </ContentsWrap>
     </MainWrap>
   );
