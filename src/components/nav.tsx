@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
-import { Link, NavLink } from 'react-router-dom';
-import {
-  RiGithubFill,
-  RiFacebookCircleFill,
-  FaBloggerB,
-} from 'react-icons/all';
+import { Link } from 'react-router-dom';
+
+import StraightNav from './straightnav';
+import BurgerNav from './burgernav';
 
 const Header = styled.header`
   width: 100%;
@@ -29,73 +27,30 @@ const Nav = styled.nav`
   line-height: 0;
 `;
 
-const Ul = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style: none;
-`;
-
-const List = styled.li`
-  padding: 0 25px 0 0;
-  vertical-align: middle;
-  display: inline-block;
-`;
-
-const NavBut = styled(NavLink)`
-  text-decoration: none;
-  font-size: 17px;
-
-  color: #000000;
-`;
-
-const LinkBut = styled.a`
-  color: #000000;
-`;
-
 function nav() {
+  const [windowSize, setWindowSize] = useState(0);
+
+  useEffect(() => {
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width/height to state
+      setWindowSize(window.innerWidth);
+    }
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []); // Empty array ensures that effect is only run on mount
+
   return (
     <Header>
       <LogoBtn to="/">유도혁</LogoBtn>
-
-      <Nav>
-        <Ul>
-          <List data-menuanchor="projects">
-            <NavBut
-              to="/projects"
-              activeStyle={{
-                textDecoration: 'underline',
-              }}
-            >
-              Projects
-            </NavBut>
-          </List>
-          <List>
-            <NavBut
-              to="/about"
-              activeStyle={{
-                textDecoration: 'underline',
-              }}
-            >
-              About/Contact
-            </NavBut>
-          </List>
-          <List>
-            <LinkBut href="https://okdohyuk.tistory.com/" target="_blank">
-              <FaBloggerB />
-            </LinkBut>
-          </List>
-          <List>
-            <LinkBut href="https://github.com/okdohyuk" target="_blank">
-              <RiGithubFill />
-            </LinkBut>
-          </List>
-          <List>
-            <LinkBut href="https://www.facebook.com/okdohyuk" target="_blank">
-              <RiFacebookCircleFill />
-            </LinkBut>
-          </List>
-        </Ul>
-      </Nav>
+      <Nav>{windowSize < 900 ? <BurgerNav /> : <StraightNav />}</Nav>
     </Header>
   );
 }
