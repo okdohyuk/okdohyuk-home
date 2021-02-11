@@ -151,7 +151,10 @@ function Home() {
         <LeftWrap>
           <Collection>
             <Name>유도혁</Name>
-            <About>주로 React와 TypeScript로 프론트 개발을 하고있습니다.</About>
+            <About>
+              프론트엔드 개발에 관심이 많은 개발자 유도혁입니다, 만나서
+              반갑습니다😃
+            </About>
             <DetailLink to="/about">저에 대해서</DetailLink>
           </Collection>
         </LeftWrap>

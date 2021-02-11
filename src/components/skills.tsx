@@ -12,6 +12,7 @@ import google from '../lib/image/google-logo.png';
 
 const SkillsWrap = styled.div`
   padding: 15px;
+  padding-bottom: 5rem;
   text-align: center;
   background-color: #d6d6d6;
 `;

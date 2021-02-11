@@ -8,12 +8,15 @@ import Contact from '../components/contact';
 const MainWrap = styled.div``;
 
 const AboutWrap = styled.div`
-  min-height: 100vh;
+  height: 100vh;
+  flex-direction: row-reverse;
   display: flex;
   flex: 1;
-  flex-direction: column;
-  @media screen and (min-width: 900px) {
-    flex-direction: row-reverse;
+
+  @media screen and (max-width: 900px) {
+    height: unset;
+    padding-bottom: 5rem;
+    flex-direction: column;
   }
 `;
 
@@ -80,11 +83,14 @@ function About() {
         </RightWrap>
         <LeftWrap>
           <TextWrap>
-            <Title>00한 개발자</Title>
+            <Title>성실한 개발자</Title>
             <AboutText>
-              저는 프론트엔드 개발에 관심이 많은 개발자 유도혁입니다. 저는
-              자기개발을 위하여 꾸준히 경진대회 참가와, 개인프로젝트 제작를
-              하고있습니다. 맡은 일에 최선과 책임을 다하고 있습니다.
+              저는 프론트엔드 개발에 관심이 많은 개발자 유도혁입니다. 현재
+              한세사이버보안고등학교에 재학 중이며, 시스템보안연구동아리의
+              부장을 맡아 부원들에게 멘토로서의 역할로 웹 개발의 학습을 돕고
+              있습니다. 저는 자기개발을 위하여 꾸준히 경진대회 참가와 개인
+              프로젝트를 제작하고 있습니다. 저의 성실한 성격을 바탕으로 맡은
+              일에 최선과 책임을 다하고 있습니다.
             </AboutText>
           </TextWrap>
         </LeftWrap>

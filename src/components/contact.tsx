@@ -4,8 +4,9 @@ import useClipboard from 'react-use-clipboard';
 
 const ContactWrap = styled.div`
   padding: 15px;
-  height: 50vh;
+  height: 25vh;
   display: flex;
+  position: relative;
   flex-direction: column;
   text-align: center;
   align-items: center;
@@ -19,7 +20,7 @@ const Title = styled.h1`
 `;
 
 const Email = styled.button`
-  margin: 20px 0;
+  margin: 10px 0;
   background-color: transparent;
   border: none;
   outline: none;

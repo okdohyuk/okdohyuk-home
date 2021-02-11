@@ -5,6 +5,7 @@ import Nav from './nav';
 import Home from '../routes/home';
 import Projects from '../routes/projects';
 import About from '../routes/about';
+import Contents from '../routes/contents';
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/" component={Home}></Route>
-          <Route exact path="/projects" component={Projects}></Route>
-          <Route exact path="/about" component={About}></Route>
+          <Route path="/projects" component={Projects}></Route>
+          <Route path="/about" component={About}></Route>
+          <Route path="/contents/:id" component={Contents}></Route>
         </Switch>
       </div>
     </Router>
