@@ -20,8 +20,8 @@ const List = styled.li`
 `;
 
 const NavBut = styled(NavLink)`
-  text-decoration: none;
   font-size: 17px;
+  text-decoration: none;
 
   color: #000000;
 `;

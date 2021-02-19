@@ -26,10 +26,10 @@ const NavBut = styled(NavLink)`
 
 const BottomWrap = styled.div`
   width: 100%;
-  position: absolute;
-  list-style: none;
   bottom: 10px;
   right: 0;
+  position: absolute;
+  list-style: none;
 `;
 
 const BottomList = styled.li`
@@ -45,10 +45,10 @@ const LinkBut = styled.a`
 var styles = {
   //react-burger-menu-btn
   bmBurgerButton: {
-    position: 'relative',
     width: '20px',
     height: '18px',
     right: '25px',
+    position: 'relative',
   },
   bmMenuButton: { outline: 'none' },
   bmBurgerBars: {
@@ -58,21 +58,21 @@ var styles = {
     background: '#a90000',
   },
   bmCrossButton: {
-    height: '24px',
     width: '24px',
+    height: '24px',
   },
   bmCross: {
     background: '#bdc3c7',
   },
   bmMenuWrap: {
-    position: 'fixed',
-    height: '100%',
     width: '300px',
+    height: '100%',
     top: '0',
+    position: 'fixed',
   },
   bmMenu: {
-    background: '#eeeeee',
     padding: '2.5em 1.5em 0',
+    background: '#eeeeee',
     fontSize: '1.15em',
   },
   bmMorphShape: {

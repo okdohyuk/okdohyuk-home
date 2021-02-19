@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
 
-import MyProfile from '../lib/image/myprofile.jpg';
+import MyProfile from 'lib/image/myprofile.jpg';
 
 const Rotation = keyframes`
   from {
@@ -17,8 +17,8 @@ const Rotation = keyframes`
 const MainWrap = styled.div`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(135deg, #f9ed69 10%, #f08a5d 50%, #b83b5e 100%);
   display: table;
+  background: linear-gradient(135deg, #f9ed69 10%, #f08a5d 50%, #b83b5e 100%);
 `;
 
 const ContentsWrap = styled.div`
@@ -26,6 +26,7 @@ const ContentsWrap = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
+
   @media screen and (min-width: 900px) {
     flex-direction: row-reverse;
   }
@@ -73,9 +74,9 @@ const About = styled.div`
 `;
 
 const DetailLink = styled(Link)`
-  width: 70px;
-  display: block;
+  width: 6em;
   padding: 10px;
+  display: block;
   text-decoration: none;
   border-radius: 3px;
   border-width: 0;
@@ -86,8 +87,8 @@ const DetailLink = styled(Link)`
 `;
 
 const ProfileWrap = styled.div`
-  height: 21.5rem;
   width: 21.5rem;
+  height: 21.5rem;
   padding: 20px 0;
   justify-content: center;
   align-items: center;
@@ -96,30 +97,30 @@ const ProfileWrap = styled.div`
 `;
 
 const ProfileAnimate = styled.div`
-  height: 21.5rem;
   width: 21.5rem;
+  height: 21.5rem;
   border-radius: 9000px;
   background: linear-gradient(180deg, #b83b5e 80%, #6a2c70);
 `;
 
 const ActiveProfileAnimate = styled.div`
-  height: 21.5rem;
   width: 21.5rem;
+  height: 21.5rem;
   border-radius: 9000px;
   background: linear-gradient(180deg, #b83b5e 80%, #6a2c70);
   animation: ${Rotation} infinite 3s linear;
 `;
 
 const ImgWrap = styled.div`
+  padding: 3px;
   position: absolute;
   border-radius: 9000px;
   background-color: black;
-  padding: 3px;
 `;
 
 const ImgFigure = styled.figure`
-  height: 20rem;
   width: 20rem;
+  height: 20rem;
   border-radius: 9000px;
   overflow: hidden;
   background-color: transparent;

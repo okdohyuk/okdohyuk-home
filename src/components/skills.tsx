@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import html from '../lib/image/html-logo.png';
-import css from '../lib/image/css-logo.png';
-import js from '../lib/image/javascript-logo.png';
-import react from '../lib/image/react-logo.svg';
-import ts from '../lib/image/typescript-logo.png';
-import sass from '../lib/image/sass-logo.png';
-import git from '../lib/image/git-logo.png';
-import google from '../lib/image/google-logo.png';
-import notion from '../lib/image/notion-logo.svg';
-import slack from '../lib/image/slack-logo.png';
-import figma from '../lib/image/figma-logo.svg';
-import zeplin from '../lib/image/zeplin-logo.svg';
+import html from 'lib/image/html-logo.png';
+import css from 'lib/image/css-logo.png';
+import js from 'lib/image/javascript-logo.png';
+import react from 'lib/image/react-logo.svg';
+import ts from 'lib/image/typescript-logo.png';
+import sass from 'lib/image/sass-logo.png';
+import git from 'lib/image/git-logo.png';
+import google from 'lib/image/google-logo.png';
+import notion from 'lib/image/notion-logo.svg';
+import slack from 'lib/image/slack-logo.png';
+import figma from 'lib/image/figma-logo.svg';
+import zeplin from 'lib/image/zeplin-logo.svg';
 
 const SkillsWrap = styled.div`
   padding: 15px;
@@ -37,15 +37,16 @@ const KindTitle = styled.h3`
 const SkillBox = styled.div``;
 
 const SkillImg = styled.div`
-  text-align: center;
-  display: inline-block;
   width: 114px;
   height: 116px;
+  display: inline-block;
   border-radius: 30px 30px;
+  text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 1rem;
   box-shadow: 0 3px 6px rgb(0 0 0 / 20%), 0 3px 6px rgb(0 0 0 / 20%);
+
   @media screen and (max-width: 900px) {
     margin: 5px;
   }

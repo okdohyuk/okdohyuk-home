@@ -26,10 +26,10 @@ const HGroup = styled.div`
 `;
 
 const Title = styled.h1`
-  display: block;
   margin-bottom: 9px;
+  display: block;
   font-weight: 700;
-  font-size: 1.6875em;
+  font-size: 30px;
   line-height: 1.4444em;
 `;
 
@@ -47,11 +47,11 @@ const Image = styled.img`
 `;
 
 const BackBtn = styled(ButtonBack)`
-  width: 50px;
+  width: 40px;
   height: 50px;
-  position: absolute;
   top: 50%;
   left: 0;
+  position: absolute;
   transform: translateY(-50%);
   border: none;
   outline: none;
@@ -59,14 +59,19 @@ const BackBtn = styled(ButtonBack)`
   color: #fff;
   font-size: 40px;
   font-weight: 900;
+  line-height: 1;
+  @media screen and (max-width: 767px) {
+    background-color: transparent;
+    color: #7a7a7a;
+  }
 `;
 
 const NextBtn = styled(ButtonNext)`
-  width: 50px;
+  width: 40px;
   height: 50px;
-  position: absolute;
   top: 50%;
   right: 0;
+  position: absolute;
   transform: translateY(-50%);
   border: none;
   outline: none;
@@ -74,6 +79,11 @@ const NextBtn = styled(ButtonNext)`
   color: #fff;
   font-size: 40px;
   font-weight: 900;
+  line-height: 1;
+  @media screen and (max-width: 767px) {
+    background-color: transparent;
+    color: #7a7a7a;
+  }
 `;
 
 const CarouselMain = styled(CarouselProvider)`
@@ -112,8 +122,8 @@ function Contents({ board }: any) {
           <SliderWrap>
             <Slider>
               {board.images.map((row: any) => (
-                <Slide index={row.id}>
-                  <Image src={row.image}></Image>
+                <Slide key={row.id} index={row.id}>
+                  <Image src={row.image} />
                 </Slide>
               ))}
             </Slider>
@@ -121,7 +131,6 @@ function Contents({ board }: any) {
             <NextBtn>〉</NextBtn>
           </SliderWrap>
         </CarouselMain>
-
         <Text dangerouslySetInnerHTML={{ __html: board.text }}></Text>
       </ContentsWrap>
     </MainWrap>

@@ -11,8 +11,8 @@ const BoardItemWrap = styled.div`
 
 const GoDetail = styled(Link)`
   min-height: 148px;
-  display: block;
   padding: 30px 0 30px;
+  display: block;
   text-decoration: none;
   color: #080808;
 `;
@@ -39,16 +39,17 @@ const Logo = styled.img`
 `;
 
 const Title = styled.span`
-  display: block;
+  max-height: 2.8em;
   margin-bottom: 8px;
+  display: block;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  max-height: 2.8em;
   font-weight: 700;
   font-size: 1.425em;
   line-height: 1.4;
+
   @media screen and (max-width: 767px) {
     font-size: 1.125em;
   }
@@ -63,14 +64,13 @@ const Introduce = styled.span`
   font-size: 1.07em;
   line-height: 1.6;
   color: #666;
+
   @media screen and (max-width: 767px) {
     font-size: 0.9375em;
   }
 `;
 
 function BoardItem({ row }: any) {
-  console.log(row);
-
   return (
     <BoardItemWrap>
       <GoDetail to={`/contents/${row.id}`}>

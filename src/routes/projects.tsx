@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from '@emotion/styled';
 
-import BoardItem from '../components/boardItem';
+import BoardItem from 'components/boardItem';
 
 const ProjectsWrap = styled.div`
   padding: 55px 15px 0 15px;

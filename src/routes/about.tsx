@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 
-import MyProfile from '../lib/image/okdohyuk.jpeg';
-import Skills from '../components/skills';
-import Contact from '../components/contact';
+import MyProfile from 'lib/image/okdohyuk.jpeg';
+import Skills from 'components/skills';
+import Contact from 'components/contact';
 
 const MainWrap = styled.div``;
 
 const AboutWrap = styled.div`
   height: 100vh;
-  flex-direction: row-reverse;
   display: flex;
   flex: 1;
+  flex-direction: row-reverse;
 
   @media screen and (max-width: 900px) {
     height: unset;
@@ -42,6 +42,7 @@ const RightWrap = styled.div`
   @media screen and (min-width: 900px) {
     flex: 1;
   }
+
   @media screen and (max-width: 900px) {
     padding-top: 55px;
   }
@@ -63,6 +64,7 @@ const Title = styled.h1`
 
 const AboutText = styled.div`
   font-size: 30px;
+
   @media screen and (max-width: 900px) {
     font-size: 25px;
   }
@@ -72,6 +74,7 @@ const ImgFigure = styled.figure`
   width: 30rem;
   overflow: hidden;
   background-color: transparent;
+
   @media screen and (max-width: 900px) {
     width: 90%;
   }
