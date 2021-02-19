@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
 
 import MyProfile from '../lib/image/okdohyuk.jpeg';
@@ -27,6 +27,7 @@ const LeftWrap = styled.div`
   justify-content: center;
 
   @media screen and (min-width: 900px) {
+    padding: 15px 0 15px 15px;
     flex: 1;
   }
 `;
@@ -47,7 +48,12 @@ const RightWrap = styled.div`
 `;
 
 const TextWrap = styled.div`
+  margin-left: 70px;
   display: table;
+
+  @media screen and (max-width: 900px) {
+    margin: 0;
+  }
 `;
 
 const Title = styled.h1`
@@ -57,6 +63,9 @@ const Title = styled.h1`
 
 const AboutText = styled.div`
   font-size: 30px;
+  @media screen and (max-width: 900px) {
+    font-size: 25px;
+  }
 `;
 
 const ImgFigure = styled.figure`
@@ -73,6 +82,7 @@ const Profile = styled.img`
 `;
 
 function About() {
+  document.title = `okdohyuk's home`;
   return (
     <MainWrap>
       <AboutWrap>

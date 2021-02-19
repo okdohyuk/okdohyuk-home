@@ -9,6 +9,10 @@ import ts from '../lib/image/typescript-logo.png';
 import sass from '../lib/image/sass-logo.png';
 import git from '../lib/image/git-logo.png';
 import google from '../lib/image/google-logo.png';
+import notion from '../lib/image/notion-logo.svg';
+import slack from '../lib/image/slack-logo.png';
+import figma from '../lib/image/figma-logo.svg';
+import zeplin from '../lib/image/zeplin-logo.svg';
 
 const SkillsWrap = styled.div`
   padding: 15px;
@@ -64,6 +68,10 @@ function Skills() {
       <SkillBox>
         <SkillImg style={{ backgroundImage: `url(${git})` }} />
         <SkillImg style={{ backgroundImage: `url(${google})` }} />
+        <SkillImg style={{ backgroundImage: `url(${notion})` }} />
+        <SkillImg style={{ backgroundImage: `url(${slack})` }} />
+        <SkillImg style={{ backgroundImage: `url(${figma})` }} />
+        <SkillImg style={{ backgroundImage: `url(${zeplin})` }} />
       </SkillBox>
     </SkillsWrap>
   );

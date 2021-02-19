@@ -3,8 +3,8 @@ import styled from '@emotion/styled';
 import useClipboard from 'react-use-clipboard';
 
 const ContactWrap = styled.div`
+  height: 250px;
   padding: 15px;
-  height: 25vh;
   display: flex;
   position: relative;
   flex-direction: column;

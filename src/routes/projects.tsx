@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 import BoardItem from '../components/boardItem';
 
 const ProjectsWrap = styled.div`
-  padding: 55px 15px 15px 15px;
+  padding: 55px 15px 0 15px;
 `;
 
 const Title = styled.h1`
@@ -19,7 +19,14 @@ const Board = styled.div`
   margin: 0 auto;
 `;
 
+const Pagination = styled.div`
+  max-width: 860px;
+  margin: 60px auto 160px;
+  text-align: center;
+`;
+
 function Projects({ boards }: any) {
+  document.title = `okdohyuk's home`;
   return (
     <ProjectsWrap>
       <Title>Projects</Title>
@@ -28,6 +35,7 @@ function Projects({ boards }: any) {
           <BoardItem key={row.id} row={row} />
         ))}
       </Board>
+      <Pagination></Pagination>
     </ProjectsWrap>
   );
 }

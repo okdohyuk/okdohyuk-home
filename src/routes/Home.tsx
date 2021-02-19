@@ -37,6 +37,7 @@ const LeftWrap = styled.div`
   justify-content: center;
 
   @media screen and (min-width: 900px) {
+    padding: 15px 0 15px 15px;
     flex: 1;
   }
 `;
@@ -48,6 +49,7 @@ const RightWrap = styled.div`
   align-items: center;
 
   @media screen and (min-width: 900px) {
+    padding: 15px 15px 15px 0;
     flex: 1;
   }
 `;
@@ -60,19 +62,20 @@ const Collection = styled.div`
 `;
 
 const Name = styled.h1`
-  font-size: 25px;
+  font-size: 1.7em;
+  font-weight: 700;
 `;
 
 const About = styled.div`
-  width: 300px;
+  width: 310px;
   margin: 10px 0;
-  font-size: 20px;
+  font-size: 1.28em;
 `;
 
 const DetailLink = styled(Link)`
-  width: 69px;
+  width: 70px;
   display: block;
-  padding: 7px;
+  padding: 10px;
   text-decoration: none;
   border-radius: 3px;
   border-width: 0;
@@ -128,6 +131,7 @@ const Profile = styled.img`
 
 function Home() {
   const [onMouse, setOnMouse] = useState(false);
+  document.title = `okdohyuk's home`;
   return (
     <MainWrap>
       <ContentsWrap>

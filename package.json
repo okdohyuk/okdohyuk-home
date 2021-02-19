@@ -20,6 +20,7 @@
     "@types/react-router-dom": "^5.1.7",
     "@types/redux": "^3.6.0",
     "@types/styled-components": "^5.1.7",
+    "pure-react-carousel": "^1.27.6",
     "react": "^17.0.1",
     "react-burger-menu": "^3.0.3",
     "react-dom": "^17.0.1",

@@ -18,7 +18,7 @@ const LogoBtn = styled(Link)`
   padding-left: 25px;
   float: left;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   color: #000000;
 `;
 
