@@ -157,8 +157,9 @@ function Home() {
           <Collection>
             <Name>유도혁</Name>
             <About>
-              프론트엔드 개발에 관심이 많은 개발자 유도혁입니다, 만나서
-              반갑습니다😃
+              열정있는 개발자 유도혁입니다,
+              <br />
+              만나서 반갑습니다😃
             </About>
             <DetailLink to="/about">저에 대해서</DetailLink>
           </Collection>

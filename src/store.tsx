@@ -24,6 +24,7 @@ const initialState = {
       logo: ssr.logo,
       images: ssr.images,
       text: ssr.text,
+      github: ssr.github,
     },
     {
       id: doom.id,
@@ -32,6 +33,7 @@ const initialState = {
       logo: doom.logo,
       images: doom.images,
       text: doom.text,
+      github: doom.github,
     },
     {
       id: tagplus.id,
@@ -40,6 +42,7 @@ const initialState = {
       logo: tagplus.logo,
       images: tagplus.images,
       text: tagplus.text,
+      github: tagplus.github,
     },
   ],
 };

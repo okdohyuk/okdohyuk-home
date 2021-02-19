@@ -9,6 +9,7 @@ import {
   ButtonNext,
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import { RiGithubFill } from 'react-icons/ri';
 
 const MainWrap = styled.div`
   padding: 0 15px;
@@ -99,7 +100,16 @@ const SliderWrap = styled.div`
   position: relative;
 `;
 
-const Text = styled.div``;
+const Text = styled.div`
+  margin: 25px 0;
+`;
+
+const Github = styled.div`
+  margin-top: 100px;
+  text-align: center;
+`;
+
+const GoGithub = styled.a``;
 
 function Contents({ board }: any) {
   document.title = `${board.title}`;
@@ -132,6 +142,11 @@ function Contents({ board }: any) {
           </SliderWrap>
         </CarouselMain>
         <Text dangerouslySetInnerHTML={{ __html: board.text }}></Text>
+        <Github>
+          <GoGithub href={board.github} target="_blank">
+            <RiGithubFill style={{ width: 80, height: 80 }} color="#000" />
+          </GoGithub>
+        </Github>
       </ContentsWrap>
     </MainWrap>
   );
