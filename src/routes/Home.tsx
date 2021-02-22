@@ -17,65 +17,50 @@ const Rotation = keyframes`
 const MainWrap = styled.div`
   width: 100vw;
   height: 100vh;
-  display: table;
-  background: linear-gradient(135deg, #f9ed69 10%, #f08a5d 50%, #b83b5e 100%);
+
+  @media screen and (max-width: 1000px) {
+    height: auto;
+  }
 `;
 
 const ContentsWrap = styled.div`
   height: 100%;
-  display: flex;
+  padding: 55px 15px 0 15px;
+  justify-content: center;
   flex: 1;
   flex-direction: column;
 
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 1000px) {
+    margin: 0 150px 0 300px;
+    padding: 0;
+    display: flex;
     flex-direction: row-reverse;
-  }
-`;
-
-const LeftWrap = styled.div`
-  padding: 15px;
-  display: flex;
-  justify-content: center;
-
-  @media screen and (min-width: 900px) {
-    padding: 15px 0 15px 15px;
-    flex: 1;
-  }
-`;
-
-const RightWrap = styled.div`
-  padding: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media screen and (min-width: 900px) {
-    padding: 15px 15px 15px 0;
-    flex: 1;
+    align-items: center;
   }
 `;
 
 const Collection = styled.div`
-  max-width: 300px;
+  min-width: 330px;
   display: flex;
+  flex: 1;
+  opacity: 1;
   flex-direction: column;
   align-self: center;
 `;
 
 const Name = styled.h1`
-  font-size: 1.7em;
+  font-size: 2.2em;
   font-weight: 700;
 `;
 
 const About = styled.div`
-  width: 310px;
   margin: 10px 0;
-  font-size: 1.28em;
+  font-size: 1.7em;
 `;
 
 const DetailLink = styled(Link)`
-  width: 6em;
-  padding: 10px;
+  width: 5.3em;
+  padding: 7px;
   display: block;
   text-decoration: none;
   border-radius: 3px;
@@ -83,51 +68,108 @@ const DetailLink = styled(Link)`
   text-align: center;
   background-color: #3499db;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 18px;
 `;
 
 const ProfileWrap = styled.div`
-  width: 21.5rem;
-  height: 21.5rem;
+  width: 32rem;
+  min-width: 32rem;
+  height: 32rem;
   padding: 20px 0;
+  flex: 1;
+  opacity: 1;
   justify-content: center;
   align-items: center;
   display: flex;
   overflow: hidden;
+
+  @media screen and (max-width: 1000px) {
+    min-width: 0;
+    width: 19.3rem;
+    height: 19.3rem;
+    margin: 0 auto;
+  }
 `;
 
 const ProfileAnimate = styled.div`
-  width: 21.5rem;
-  height: 21.5rem;
+  width: 32rem;
+  height: 32rem;
   border-radius: 9000px;
-  background: linear-gradient(180deg, #b83b5e 80%, #6a2c70);
+  background: linear-gradient(180deg, #d9edff 80%, #ffd966);
+
+  @media screen and (max-width: 1000px) {
+    width: 19.3rem;
+    height: 19.3rem;
+  }
 `;
 
 const ActiveProfileAnimate = styled.div`
-  width: 21.5rem;
-  height: 21.5rem;
+  width: 32rem;
+  height: 32rem;
   border-radius: 9000px;
-  background: linear-gradient(180deg, #b83b5e 80%, #6a2c70);
+  background: linear-gradient(180deg, #d9edff 80%, #ffd966);
   animation: ${Rotation} infinite 3s linear;
+
+  @media screen and (max-width: 1000px) {
+    width: 19.3rem;
+    height: 19.3rem;
+  }
 `;
 
 const ImgWrap = styled.div`
-  padding: 3px;
+  padding: 1px;
   position: absolute;
   border-radius: 9000px;
   background-color: black;
 `;
 
 const ImgFigure = styled.figure`
-  width: 20rem;
-  height: 20rem;
+  width: 30rem;
+  height: 30rem;
   border-radius: 9000px;
   overflow: hidden;
   background-color: transparent;
+
+  @media screen and (max-width: 1000px) {
+    width: 18rem;
+    height: 18rem;
+  }
 `;
 
 const Profile = styled.img`
   width: 100%;
+`;
+
+const BackText = styled.div`
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+  writing-mode: vertical-rl;
+  font-size: 270px;
+  line-height: 300px;
+  color: #eeeeee;
+
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+`;
+
+const BackText2 = styled.div`
+  padding-left: 250px;
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  z-index: -1;
+  font-size: 270px;
+  line-height: 260px;
+
+  color: #eeeeee;
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 function Home() {
@@ -136,35 +178,34 @@ function Home() {
   return (
     <MainWrap>
       <ContentsWrap>
-        <RightWrap>
-          <ProfileWrap
-            onMouseEnter={() => setOnMouse(true)}
-            onMouseLeave={() => setOnMouse(false)}
-          >
-            {onMouse ? (
-              <ActiveProfileAnimate></ActiveProfileAnimate>
-            ) : (
-              <ProfileAnimate></ProfileAnimate>
-            )}
-            <ImgWrap>
-              <ImgFigure>
-                <Profile src={MyProfile} alt={MyProfile} />
-              </ImgFigure>
-            </ImgWrap>
-          </ProfileWrap>
-        </RightWrap>
-        <LeftWrap>
-          <Collection>
-            <Name>유도혁</Name>
-            <About>
-              열정있는 개발자 유도혁입니다,
-              <br />
-              만나서 반갑습니다😃
-            </About>
-            <DetailLink to="/about">저에 대해서</DetailLink>
-          </Collection>
-        </LeftWrap>
+        <ProfileWrap
+          onMouseEnter={() => setOnMouse(true)}
+          onMouseLeave={() => setOnMouse(false)}
+        >
+          {onMouse ? (
+            <ActiveProfileAnimate></ActiveProfileAnimate>
+          ) : (
+            <ProfileAnimate></ProfileAnimate>
+          )}
+          <ImgWrap>
+            <ImgFigure>
+              <Profile src={MyProfile} alt={MyProfile} />
+            </ImgFigure>
+          </ImgWrap>
+        </ProfileWrap>
+
+        <Collection>
+          <Name>유도혁</Name>
+          <About>
+            열정있는 개발자 유도혁입니다,
+            <br />
+            만나서 반갑습니다😃
+          </About>
+          <DetailLink to="/about">저에 대해서</DetailLink>
+        </Collection>
       </ContentsWrap>
+      <BackText>Developer</BackText>
+      <BackText2>okdohyuk</BackText2>
     </MainWrap>
   );
 }

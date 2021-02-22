@@ -10,7 +10,6 @@ const ContactWrap = styled.div`
   flex-direction: column;
   text-align: center;
   align-items: center;
-  background-color: #8f8f8f;
 `;
 
 const Title = styled.h1`

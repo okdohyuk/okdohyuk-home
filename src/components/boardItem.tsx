@@ -15,6 +15,10 @@ const GoDetail = styled(Link)`
   display: block;
   text-decoration: none;
   color: #080808;
+
+  @media screen and (max-width: 767px) {
+    min-height: 100px;
+  }
 `;
 
 const LogoWrap = styled.span`
@@ -30,11 +34,11 @@ const LogoWrap = styled.span`
 `;
 
 const Logo = styled.img`
-  width: 195px;
-  margin: 0 0 0 -23.5px;
+  height: 148px;
 
   @media screen and (max-width: 767px) {
-    width: 150px;
+    width: auto;
+    height: 113px;
   }
 `;
 
@@ -47,11 +51,11 @@ const Title = styled.span`
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-weight: 700;
-  font-size: 1.425em;
+  font-size: 1.225em;
   line-height: 1.4;
 
   @media screen and (max-width: 767px) {
-    font-size: 1.125em;
+    line-height: 1.2;
   }
 `;
 
@@ -66,7 +70,7 @@ const Introduce = styled.span`
   color: #666;
 
   @media screen and (max-width: 767px) {
-    font-size: 0.9375em;
+    -webkit-line-clamp: 2;
   }
 `;
 
