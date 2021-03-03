@@ -14,7 +14,7 @@ const Rotation = keyframes`
     }
 `;
 
-const MainWrap = styled.div`
+const HomeWrap = styled.div`
   width: 100vw;
   height: 100vh;
 
@@ -176,7 +176,7 @@ function Home() {
   const [onMouse, setOnMouse] = useState(false);
   document.title = `okdohyuk's home`;
   return (
-    <MainWrap>
+    <HomeWrap>
       <ContentsWrap>
         <ProfileWrap
           onMouseEnter={() => setOnMouse(true)}
@@ -206,7 +206,7 @@ function Home() {
       </ContentsWrap>
       <BackText>Developer</BackText>
       <BackText2>okdohyuk</BackText2>
-    </MainWrap>
+    </HomeWrap>
   );
 }
 
