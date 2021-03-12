@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import styled from '@emotion/styled';
+import { useSelector } from 'react-redux';
+import styled from 'styled-components';
 
 import BoardItem from 'components/boardItem';
 
@@ -33,8 +33,14 @@ const Pagination = styled.div`
   text-align: center;
 `;
 
-function Projects({ boards }: any) {
+type RootState = {
+  boards: any;
+};
+
+export function Projects() {
   document.title = `okdohyuk's home`;
+
+  const boards = useSelector((state: RootState) => state.boards);
   return (
     <ProjectsWrap>
       <Title>Projects</Title>
@@ -47,11 +53,3 @@ function Projects({ boards }: any) {
     </ProjectsWrap>
   );
 }
-
-let mapStateToProps = (state: any) => {
-  return {
-    boards: state.boards,
-  };
-};
-
-export default connect(mapStateToProps)(Projects);

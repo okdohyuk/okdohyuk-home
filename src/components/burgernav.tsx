@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu';
 import {

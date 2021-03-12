@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import MyProfile from 'lib/image/okdohyuk.jpeg';
 
@@ -67,10 +67,12 @@ const AboutText = styled.div`
   }
 `;
 
-const ImgFigure = styled.figure`
+const ImgFigure = styled.figure<A>`
   width: 30rem;
+  height: 40rem;
   overflow: hidden;
-  background-color: transparent;
+  background: url(${(props) => props.img});
+  background-size: cover;
 
   @media screen and (max-width: 900px) {
     width: 90%;
@@ -81,13 +83,15 @@ const Profile = styled.img`
   width: 100%;
 `;
 
+type A = {
+  img: string;
+};
+
 function abouts() {
   return (
     <AboutsWrap>
       <RightWrap>
-        <ImgFigure>
-          <Profile src={MyProfile} alt={MyProfile} />
-        </ImgFigure>
+        <ImgFigure img={MyProfile}></ImgFigure>
       </RightWrap>
       <LeftWrap>
         <TextWrap>

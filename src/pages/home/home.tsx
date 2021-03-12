@@ -137,7 +137,14 @@ const ImgFigure = styled.figure`
 `;
 
 const Profile = styled.img`
-  width: 100%;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 9000px;
+
+  @media screen and (max-width: 1000px) {
+    width: 18rem;
+    height: 18rem;
+  }
 `;
 
 const BackText = styled.div`
@@ -172,7 +179,7 @@ const BackText2 = styled.div`
   }
 `;
 
-function Home() {
+export function Home() {
   const [onMouse, setOnMouse] = useState(false);
   document.title = `okdohyuk's home`;
   return (
@@ -209,5 +216,3 @@ function Home() {
     </HomeWrap>
   );
 }
-
-export default Home;

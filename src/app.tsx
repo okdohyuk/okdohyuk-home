@@ -2,10 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Nav from 'components/nav';
-import Home from 'routes/home';
-import Projects from 'routes/projects';
-import About from 'routes/about';
-import Contents from 'routes/contents';
+import { Home, About, Projects, Contents } from './pages';
 
 function App() {
   return (

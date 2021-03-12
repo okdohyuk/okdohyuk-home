@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import html from 'lib/image/html-logo.png';
 import css from 'lib/image/css-logo.png';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 const BoardItemWrap = styled.div`
   width: 100%;

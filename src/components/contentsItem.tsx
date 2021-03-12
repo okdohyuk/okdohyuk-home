@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import {
   CarouselProvider,
   Slider,
@@ -13,6 +13,7 @@ import { RiGithubFill } from 'react-icons/ri';
 const ContentsItemWrap = styled.div`
   max-width: 860px;
   margin: 100px auto 100px auto;
+  padding: 0 15px;
 `;
 
 const HGroup = styled.div`
