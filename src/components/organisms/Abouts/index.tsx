@@ -34,13 +34,11 @@ const RightWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @media screen and (min-width: 900px) {
-    flex: 1;
-  }
+  flex: 1;
 
   @media screen and (max-width: 900px) {
-    padding-top: 55px;
+    padding: 55px 20px 0 20px;
+    flex: none;
   }
 `;
 
@@ -73,21 +71,21 @@ const ImgFigure = styled.figure<A>`
   overflow: hidden;
   background: url(${(props) => props.img});
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
   @media screen and (max-width: 900px) {
-    width: 90%;
+    width: 20rem;
+    height: 30rem;
+    background-size: auto 30rem;
   }
-`;
-
-const Profile = styled.img`
-  width: 100%;
 `;
 
 type A = {
   img: string;
 };
 
-function abouts() {
+function Abouts() {
   return (
     <AboutsWrap>
       <RightWrap>
@@ -110,4 +108,4 @@ function abouts() {
   );
 }
 
-export default abouts;
+export default Abouts;

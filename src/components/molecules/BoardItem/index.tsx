@@ -1,5 +1,3 @@
-import React from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -88,4 +86,4 @@ function BoardItem({ row }: any) {
   );
 }
 
-export default connect()(BoardItem);
+export default BoardItem;

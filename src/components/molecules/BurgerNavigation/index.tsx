@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu';
@@ -92,7 +91,7 @@ var styles = {
   },
 };
 
-function BurgerNav() {
+function BurgerNavigation() {
   return (
     <Menu styles={styles} right>
       <Ul>
@@ -139,4 +138,4 @@ function BurgerNav() {
   );
 }
 
-export default BurgerNav;
+export default BurgerNavigation;

@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import StraightNav from './straightnav';
-import BurgerNav from './burgernav';
+import { StraightNavigation, BurgerNavigation } from 'components';
 
 const Header = styled.header`
   width: 100%;
@@ -27,7 +26,7 @@ const Nav = styled.nav`
   line-height: 0;
 `;
 
-function nav() {
+function Navigation() {
   const [windowSize, setWindowSize] = useState(0);
 
   useEffect(() => {
@@ -45,9 +44,11 @@ function nav() {
   return (
     <Header>
       <LogoBtn to="/">유도혁</LogoBtn>
-      <Nav>{windowSize < 900 ? <BurgerNav /> : <StraightNav />}</Nav>
+      <Nav>
+        {windowSize < 900 ? <BurgerNavigation /> : <StraightNavigation />}
+      </Nav>
     </Header>
   );
 }
 
-export default nav;
+export default Navigation;

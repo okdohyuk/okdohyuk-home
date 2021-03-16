@@ -30,7 +30,7 @@ const LinkBut = styled.a`
   color: #000000;
 `;
 
-function StraightNav() {
+function StraightNavigation() {
   return (
     <StraightUl>
       <List data-menuanchor="projects">
@@ -72,4 +72,4 @@ function StraightNav() {
   );
 }
 
-export default StraightNav;
+export default StraightNavigation;
