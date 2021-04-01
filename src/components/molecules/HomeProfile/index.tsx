@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
 
 import MyProfile from 'lib/image/myprofile.jpg';
@@ -24,6 +24,7 @@ const Wrapper = styled.div`
   align-items: center;
   display: flex;
   overflow: hidden;
+  z-index: 99999;
 
   @media screen and (max-width: 1000px) {
     min-width: 0;
@@ -91,6 +92,7 @@ const Profile = styled.img`
 
 function HomeProfile() {
   const [onMouse, setOnMouse] = useState(false);
+
   return (
     <Wrapper
       onMouseEnter={() => setOnMouse(true)}

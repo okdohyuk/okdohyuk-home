@@ -10,6 +10,8 @@ import {
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { RiGithubFill } from 'react-icons/ri';
 
+import { HorizontalRule } from 'components';
+
 const ContentsItemWrap = styled.div`
   max-width: 860px;
   margin: 100px auto 100px auto;
@@ -19,7 +21,7 @@ const ContentsItemWrap = styled.div`
 const HGroup = styled.div`
   max-width: 860px;
   margin: 50px auto 60px;
-  border-bottom: 1px solid #ebebeb;
+
 `;
 
 const Title = styled.h1`
@@ -107,25 +109,26 @@ const Github = styled.div`
 
 const GoGithub = styled.a``;
 
-function ContentsItem({ board }: any) {
+function ContentsItem({ title, logo, introduce, images, text, github }: any) {
   return (
     <ContentsItemWrap>
       <HGroup>
-        <Title>{board.title}</Title>
+        <Title>{title}</Title>
+        <HorizontalRule />
       </HGroup>
       <LogoWrap>
-        <Logo src={board.logo}></Logo>
+        <Logo src={logo}></Logo>
       </LogoWrap>
-      <Introduce>{board.introduce}</Introduce>
+      <Introduce>{introduce}</Introduce>
       <CarouselMain
         naturalSlideWidth={100}
         naturalSlideHeight={60}
         infinite={true}
-        totalSlides={board.images.length}
+        totalSlides={images.length}
       >
         <SliderWrap>
           <Slider>
-            {board.images.map((row: any) => (
+            {images.map((row: any) => (
               <Slide key={row.id} index={row.id}>
                 <Image src={row.image} />
               </Slide>
@@ -135,14 +138,16 @@ function ContentsItem({ board }: any) {
           <NextBtn>〉</NextBtn>
         </SliderWrap>
       </CarouselMain>
-      <Text dangerouslySetInnerHTML={{ __html: board.text }}></Text>
+      <Text dangerouslySetInnerHTML={{ __html: text }}></Text>
       <Github>
-        <GoGithub href={board.github} target="_blank">
+        <GoGithub href={github} target="_blank">
           <RiGithubFill style={{ width: 80, height: 80 }} color="#000" />
         </GoGithub>
       </Github>
     </ContentsItemWrap>
   );
 }
+
+
 
 export default ContentsItem;

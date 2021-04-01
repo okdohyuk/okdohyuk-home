@@ -16,10 +16,17 @@ const Board = styled.div`
 `;
 
 function BoardList({ boards }: any) {
+  console.log(boards);
   return (
     <Board>
       {boards.map((row: any) => (
-        <BoardItem key={row.id} row={row} />
+        <BoardItem
+          key={row.id}
+          id={row.id}
+          logo={row.logo}
+          title={row.title}
+          introduce={row.introduce}
+        />
       ))}
     </Board>
   );

@@ -14,7 +14,20 @@ function Contents() {
     state.boards.find((board: any) => board.id === parseInt(id)),
   );
   document.title = `${board.title}`;
-  return <ContentsTemplate contentsitem={<ContentsItem board={board} />} />;
+  return (
+    <ContentsTemplate
+      contentsitem={
+        <ContentsItem
+          title={board.title}
+          logo={board.logo}
+          introduce={board.introduce}
+          images={board.images}
+          text={board.text}
+          github={board.github}
+        />
+      }
+    />
+  );
 }
 
 export default Contents;

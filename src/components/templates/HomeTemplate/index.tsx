@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
+  z-index: 1;
 
   @media screen and (max-width: 1000px) {
     height: auto;

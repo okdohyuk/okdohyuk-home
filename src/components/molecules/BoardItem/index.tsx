@@ -72,15 +72,15 @@ const Introduce = styled.span`
   }
 `;
 
-function BoardItem({ row }: any) {
+function BoardItem({ id, logo, title, introduce }: any) {
   return (
     <BoardItemWrap>
-      <GoDetail to={`/contents/${row.id}`}>
+      <GoDetail to={`/contents/${id}`}>
         <LogoWrap>
-          <Logo src={row.logo}></Logo>
+          <Logo src={logo}></Logo>
         </LogoWrap>
-        <Title>{row.title}</Title>
-        <Introduce>{row.introduce}</Introduce>
+        <Title>{title}</Title>
+        <Introduce>{introduce}</Introduce>
       </GoDetail>
     </BoardItemWrap>
   );

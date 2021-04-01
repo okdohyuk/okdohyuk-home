@@ -1,3 +1,6 @@
+export { default as HorizontalRule } from './atoms/HorizontalRule';
+export { default as SkillImage } from './atoms/SkillImage';
+
 export { default as StraightNavigation } from './molecules/StraightNavigation';
 export { default as BurgerNavigation } from './molecules/BurgerNavigation';
 export { default as Footer } from './molecules/Footer';
