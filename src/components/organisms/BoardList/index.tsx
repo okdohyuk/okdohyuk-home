@@ -1,3 +1,4 @@
+import { BoardsState } from 'lib/types/Board';
 import styled from 'styled-components';
 
 import { BoardItem } from 'components';
@@ -16,7 +17,6 @@ const Board = styled.div`
 `;
 
 function BoardList({ boards }: any) {
-  console.log(boards);
   return (
     <Board>
       {boards.map((row: any) => (

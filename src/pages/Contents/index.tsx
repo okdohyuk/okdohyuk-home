@@ -1,16 +1,12 @@
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { Paramtype } from 'lib/types/Board';
 
 import { ContentsTemplate, ContentsItem } from 'components';
 
-type RootState = {
-  boards: any;
-  id: string;
-};
-
 function Contents() {
-  let { id }: RootState = useParams();
-  const board = useSelector((state: RootState) =>
+  let { id }: Paramtype = useParams();
+  const board = useSelector((state: any) =>
     state.boards.find((board: any) => board.id === parseInt(id)),
   );
   document.title = `${board.title}`;
