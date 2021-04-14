@@ -7,10 +7,6 @@ const styles = css`
   text-decoration: none;
   font-weight: 500;
   color: ${palette('grayscale', 2)};
-
-  &:hover {
-    text-decoration: underline;
-  }
 `;
 
 const StyledNavLink = styled(({ theme, reverse, palette, ...props }) => (

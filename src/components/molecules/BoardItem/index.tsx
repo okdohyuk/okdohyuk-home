@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { Block, Link, Atom } from 'components';
 
-const BoardItemWrap = styled.div`
+const BoardItemWrap = styled(Block)`
   width: 100%;
   overflow: hidden;
   border-bottom: 1px solid #ebebeb;
@@ -11,7 +11,6 @@ const GoDetail = styled(Link)`
   min-height: 148px;
   padding: 30px 0 30px;
   display: block;
-  text-decoration: none;
   color: #080808;
 
   @media screen and (max-width: 767px) {
@@ -19,7 +18,7 @@ const GoDetail = styled(Link)`
   }
 `;
 
-const LogoWrap = styled.span`
+const LogoWrap = styled(Atom)`
   max-width: 148px;
   margin-left: 80px;
   float: right;
@@ -40,7 +39,7 @@ const Logo = styled.img`
   }
 `;
 
-const Title = styled.span`
+const Title = styled(Atom)`
   max-height: 2.8em;
   margin-bottom: 8px;
   display: block;
@@ -52,12 +51,17 @@ const Title = styled.span`
   font-size: 1.225em;
   line-height: 1.4;
 
+  a:hover & {
+    text-decoration: underline;
+    color: #555555;
+  }
+
   @media screen and (max-width: 767px) {
     line-height: 1.2;
   }
 `;
 
-const Introduce = styled.span`
+const Introduce = styled(Atom)`
   display: block;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -75,9 +79,9 @@ const Introduce = styled.span`
 function BoardItem({ id, logo, title, introduce }: any) {
   return (
     <BoardItemWrap>
-      <GoDetail to={`/contents/${id}`}>
+      <GoDetail href={`/contents/${id}`}>
         <LogoWrap>
-          <Logo src={logo}></Logo>
+          <Logo src={logo} />
         </LogoWrap>
         <Title>{title}</Title>
         <Introduce>{introduce}</Introduce>
