@@ -43,7 +43,7 @@ const ssr = {
       image: ssr_7,
     },
   ],
-  text: `<h2 style="font-size: 26px; font-weight: bold">개발 도구</h2>
+  text: `<h2 style="font-size: 26px; font-weight: bold; line-height: 150%;">개발 도구</h2>
   <p style="font-size: 18px">프레임워크 : React</p>
   <p style="font-size: 18px">서버 : Node.js</p>
   <p style="font-size: 18px">DB : MySQL</p>
@@ -51,17 +51,17 @@ const ssr = {
   <p style="font-size: 18px">언어: TypeScript</p>
   <p style="font-size: 18px">배포: Amazon AWS</p>
   <p>&nbsp;</p>
-  <h2 style="font-size: 26px; font-weight: bold">구현된 기능</h2>
+  <h2 style="font-size: 26px; font-weight: bold; line-height: 150%;">구현된 기능</h2>
   <p style="font-size: 18px">동아리 소개 기능</p>
   <p style="font-size: 18px">신청서 신청 및 저장 기능</p>
   <p style="font-size: 18px">저장한 신청서 수정기능</p>
   <p>&nbsp;</p>
-  <h2 style="font-size: 26px; font-weight: bold">내가 구현한 기능</h2>
+  <h2 style="font-size: 26px; font-weight: bold; line-height: 150%;">내가 구현한 기능</h2>
   <p style="font-size: 18px">웹 UI/UX 구현</p>
   <p style="font-size: 18px">신청서 신청 및 저장 기능(유효성 검사)</p>
   <p style="font-size: 18px">저장된 신청서 불러오기 기능</p>
   <p>&nbsp;</p>
-  <h2 style="font-size: 26px; font-weight: bold">프로젝트를 진행하면서</h2>
+  <h2 style="font-size: 26px; font-weight: bold; line-height: 150%;">프로젝트를 진행하면서</h2>
   <p style="font-size: 18px">
     처음 진행하는 팀 프로젝트여서 나의 개발실력으로 개발을 할 수 있을지 걱정이
     들었다. 하지만, 프로젝트를 배포 후 느끼는 성취감만을 생각하며 개발에 임하였다.

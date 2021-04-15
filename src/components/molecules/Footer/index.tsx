@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Paragraph } from 'components';
 
 const FooterWrap = styled.footer`
   position: relative;
@@ -7,7 +8,8 @@ const FooterWrap = styled.footer`
   border-top: 1px solid #ebebeb;
 `;
 
-const Text = styled.p`
+const Text = styled(Paragraph)`
+  margin: 0;
   text-align: center;
   font-size: 1em;
   color: #4b4b4b;

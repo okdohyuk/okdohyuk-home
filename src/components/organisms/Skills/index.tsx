@@ -1,34 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { SkillImage } from 'components';
+import { Block, Heading, SkillImage } from 'components';
 
-const SkillsWrap = styled.div`
+const SkillsWrap = styled(Block)`
   padding: 15px;
   padding-bottom: 5rem;
   text-align: center;
 `;
 
-const Title = styled.h1`
+const Title = styled(Heading)`
   margin: 30px 0;
   font-size: 40px;
   font-weight: 900;
 `;
 
-const KindTitle = styled.h3`
+const KindTitle = styled(Heading)`
   margin-block-start: 0.83em;
   margin-block-end: 0.83em;
   font-size: 20px;
   font-weight: 500;
 `;
 
-const SkillBox = styled.div``;
+const SkillBox = styled(Block)``;
 
 function Skills() {
   return (
     <SkillsWrap>
       <Title>Skils</Title>
-      <KindTitle>Front-end</KindTitle>
+      <KindTitle level={3}>Front-end</KindTitle>
       <SkillBox>
         <SkillImage img="html" />
         <SkillImage img="css" />
@@ -37,7 +37,7 @@ function Skills() {
         <SkillImage img="typescript" />
         <SkillImage img="sass" />
       </SkillBox>
-      <KindTitle>etc</KindTitle>
+      <KindTitle level={3}>etc</KindTitle>
       <SkillBox>
         <SkillImage img="git" />
         <SkillImage img="google" />

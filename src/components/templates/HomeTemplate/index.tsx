@@ -1,8 +1,11 @@
 import styled from 'styled-components';
+import { Block } from 'components';
 
-const Wrapper = styled.div`
+const Wrapper = styled(Block)`
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  position: absolute;
   z-index: 1;
 
   @media screen and (max-width: 1000px) {

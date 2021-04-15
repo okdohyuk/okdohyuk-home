@@ -1,9 +1,9 @@
 import { BoardsState } from 'lib/types/Board';
 import styled from 'styled-components';
 
-import { BoardItem } from 'components';
+import { Block, BoardItem } from 'components';
 
-const Board = styled.div`
+const Board = styled(Block)`
   max-width: 860px;
   margin: 0 auto;
 

@@ -20,25 +20,25 @@ const doom = {
     { id: 5, image: doom_5 },
     { id: 6, image: doom_6 },
   ],
-  text: `<h2 style="font-size: 26px; font-weight: bold">개발 도구</h2>
+  text: `<h2 style="font-size: 26px; font-weight: bold; line-height: 150%;">개발 도구</h2>
   <p style="font-size: 18px">프레임워크 : React Native</p>
   <p style="font-size: 18px">서버 & DB : firebase</p>
   <p style="font-size: 18px">형상관리 : Git</p>
   <p style="font-size: 18px">언어: TypeScript</p>
   <p>&nbsp;</p>
-  <h2 style="font-size: 26px; font-weight: bold">구현된 기능</h2>
+  <h2 style="font-size: 26px; font-weight: bold; line-height: 150%;">구현된 기능</h2>
   <p style="font-size: 18px">게시판 기능</p>
   <p style="font-size: 18px">1대1 실시간 채팅</p>
   <p style="font-size: 18px">위치기반 맵 서비스</p>
   <p style="font-size: 18px">유저 서비스</p>
   <p>&nbsp;</p>
-  <h2 style="font-size: 26px; font-weight: bold">내가 구현한 기능</h2>
+  <h2 style="font-size: 26px; font-weight: bold; line-height: 150%;">내가 구현한 기능</h2>
   <p style="font-size: 18px">UI/UX 구현</p>
   <p style="font-size: 18px">회원 관련 기능(프로필 이미지, 프로필 수정)</p>
   <p style="font-size: 18px">게시판 기능</p>
   <p style="font-size: 18px">실시간 채팅 기능</p>
   <p>&nbsp;</p>
-  <h2 style="font-size: 26px; font-weight: bold">프로젝트를 진행하면서</h2>
+  <h2 style="font-size: 26px; font-weight: bold; line-height: 150%;">프로젝트를 진행하면서</h2>
   <p style="font-size: 18px">
   프로젝트 기획단계부터 참여하여 메인 서비스 및 부가서비스 그리고 유저층 등을 기획하면서 기획자의 고뇌에 대하여 알게 되었다. Notion과 Slack을 적극적으로 활용하여 다른 팀원들과 좋은 의견들을 주고받으며 프로젝트를 진행하였다. 프로젝트 진행 중 팀원 한 명의 노트북이 불의의 사고를 겪으며 개발에 참여할 수 없게 되었다. 그 팀원이 깃허브를 사용하였다면, 좋았겠지만 그렇지 않아 코드도 복구하지 못하게 되었다. 깃허브의 중요성을 다시 알게 해 주는 기회였다. 백엔드 코드가 날아갔지만, firebase를 배우게 되었고, 프로젝트를 계속 이어가게 되었다.
   </p>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
-
 import MyProfile from 'lib/image/myprofile.jpg';
+import { Block } from 'components';
 
 const Rotation = keyframes`
   from {
@@ -13,7 +13,7 @@ const Rotation = keyframes`
     }
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled(Block)`
   width: 32rem;
   min-width: 32rem;
   height: 32rem;
@@ -34,7 +34,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const ProfileAnimate = styled.div`
+const ProfileAnimate = styled(Block)`
   width: 32rem;
   height: 32rem;
   border-radius: 9000px;
@@ -46,7 +46,7 @@ const ProfileAnimate = styled.div`
   }
 `;
 
-const ActiveProfileAnimate = styled.div`
+const ActiveProfileAnimate = styled(Block)`
   width: 32rem;
   height: 32rem;
   border-radius: 9000px;
@@ -59,7 +59,7 @@ const ActiveProfileAnimate = styled.div`
   }
 `;
 
-const ImgWrap = styled.div`
+const ImgWrap = styled(Block)`
   padding: 1px;
   position: absolute;
   border-radius: 9000px;
@@ -69,6 +69,7 @@ const ImgWrap = styled.div`
 const ImgFigure = styled.figure`
   width: 30rem;
   height: 30rem;
+  margin: 0;
   border-radius: 9000px;
   overflow: hidden;
   background-color: transparent;

@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import useClipboard from 'react-use-clipboard';
+import { Atom, Block, Heading } from 'components';
 
-const ContactWrap = styled.div`
+const ContactWrap = styled(Block)`
   height: 250px;
   padding: 15px;
   display: flex;
@@ -12,7 +13,7 @@ const ContactWrap = styled.div`
   align-items: center;
 `;
 
-const Title = styled.h1`
+const Title = styled(Heading)`
   margin: 30px 0;
   font-size: 40px;
   font-weight: 900;
@@ -30,7 +31,7 @@ const Email = styled.button`
   }
 `;
 
-const AlertBox = styled.span`
+const AlertBox = styled(Atom)`
   width: 80px;
   padding: 3px;
   border-radius: 3px;

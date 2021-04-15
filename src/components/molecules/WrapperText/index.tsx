@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Atom } from 'components';
 
-const BackText = styled.div`
+const BackText = styled(Atom)`
   height: 100vh;
   position: absolute;
   top: 0;
@@ -16,7 +17,7 @@ const BackText = styled.div`
   }
 `;
 
-const BackText2 = styled.div`
+const BackText2 = styled(Atom)`
   padding-left: 250px;
   position: absolute;
   overflow: hidden;

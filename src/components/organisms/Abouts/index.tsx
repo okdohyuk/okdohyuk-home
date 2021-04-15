@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import MyProfile from 'lib/image/okdohyuk.jpeg';
+import { Block, Heading } from 'components';
 
-const AboutsWrap = styled.div`
+const AboutsWrap = styled(Block)`
   height: 100vh;
   display: flex;
   flex: 1;
@@ -16,7 +16,7 @@ const AboutsWrap = styled.div`
   }
 `;
 
-const LeftWrap = styled.div`
+const LeftWrap = styled(Block)`
   padding: 15px;
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@ const LeftWrap = styled.div`
   }
 `;
 
-const RightWrap = styled.div`
+const RightWrap = styled(Block)`
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@ const RightWrap = styled.div`
   }
 `;
 
-const TextWrap = styled.div`
+const TextWrap = styled(Block)`
   margin-left: 70px;
   display: table;
 
@@ -51,13 +51,13 @@ const TextWrap = styled.div`
   }
 `;
 
-const Title = styled.h1`
+const Title = styled(Heading)`
   margin: 30px 0;
   font-size: 40px;
   font-weight: 900;
 `;
 
-const AboutText = styled.div`
+const AboutText = styled(Block)`
   font-size: 30px;
 
   @media screen and (max-width: 900px) {

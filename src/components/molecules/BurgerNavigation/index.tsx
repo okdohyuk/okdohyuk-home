@@ -1,48 +1,55 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu';
-import {
-  RiGithubFill,
-  RiFacebookCircleFill,
-  FaBloggerB,
-} from 'react-icons/all';
+import { Block, Link, List, Icon } from 'components';
 
-const Ul = styled.ul`
+const ListWrap = styled(List)`
+  padding: 0;
   outline: none;
+  list-style-type: none;
 `;
 
-const List = styled.li`
+const ListItem = styled.li`
   margin-bottom: 6px;
-  font-size: 1.125em;
   line-height: 1.5;
 `;
 
-const NavBut = styled(NavLink)`
-  text-decoration: none;
+const NavBut = styled(Link)`
   font-size: 17px;
   color: #000000;
+
+  &:hover {
+    text-decoration: underline;
+    color: #555555;
+  }
 `;
 
-const BottomWrap = styled.div`
-  width: 100%;
-  bottom: 10px;
-  right: 0;
+const NavText = styled(Block)``;
+
+const BottomWrap = styled(Block)`
+  padding: 0 1.5em 1.5em;
+  bottom: 0;
+  left: 0;
   position: absolute;
   list-style: none;
 `;
 
 const BottomList = styled.li`
-  padding: 10px;
+  padding-right: 10px;
   vertical-align: middle;
   display: inline-block;
 `;
 
-const LinkBut = styled.a`
+const LinkBut = styled(Link)`
   color: #000000;
 `;
 
+const LinkIcon = styled(Icon)`
+  &:hover {
+    color: #555555;
+  }
+`;
+
 var styles = {
-  //react-burger-menu-btn
   bmBurgerButton: {
     width: '20px',
     height: '18px',
@@ -51,10 +58,7 @@ var styles = {
   },
   bmMenuButton: { outline: 'none' },
   bmBurgerBars: {
-    background: '#373a47',
-  },
-  bmBurgerBarsHover: {
-    background: '#a90000',
+    background: '#000000',
   },
   bmCrossButton: {
     width: '24px',
@@ -74,16 +78,6 @@ var styles = {
     background: '#eeeeee',
     fontSize: '1.15em',
   },
-  bmMorphShape: {
-    fill: '#373a47',
-  },
-  bmItemList: {
-    overflow: 'auto',
-    color: '#b8b7ad',
-  },
-  bmItem: {
-    display: 'inline-block',
-  },
   bmOverlay: {
     top: '0',
     left: '0',
@@ -94,43 +88,32 @@ var styles = {
 function BurgerNavigation() {
   return (
     <Menu styles={styles} right>
-      <Ul>
-        <List>
-          <NavBut
-            to="/projects"
-            activeStyle={{
-              textDecoration: 'underline',
-            }}
-          >
-            Projects
+      <ListWrap>
+        <ListItem>
+          <NavBut to="/projects">
+            <NavText>Projects</NavText>
           </NavBut>
-        </List>
-        <List>
-          <NavBut
-            to="/about"
-            activeStyle={{
-              textDecoration: 'underline',
-            }}
-          >
-            About/Contact
+        </ListItem>
+        <ListItem>
+          <NavBut to="/about">
+            <NavText>About/Contact</NavText>
           </NavBut>
-        </List>
-      </Ul>
-
+        </ListItem>
+      </ListWrap>
       <BottomWrap>
         <BottomList>
           <LinkBut href="https://okdohyuk.tistory.com/" target="_blank">
-            <FaBloggerB />
+            <LinkIcon icon="blog" />
           </LinkBut>
         </BottomList>
         <BottomList>
           <LinkBut href="https://github.com/okdohyuk" target="_blank">
-            <RiGithubFill />
+            <LinkIcon icon="github" />
           </LinkBut>
         </BottomList>
         <BottomList>
           <LinkBut href="https://www.facebook.com/okdohyuk" target="_blank">
-            <RiFacebookCircleFill />
+            <LinkIcon icon="facebook" />
           </LinkBut>
         </BottomList>
       </BottomWrap>

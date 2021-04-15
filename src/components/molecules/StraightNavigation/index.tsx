@@ -1,73 +1,81 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
-import {
-  RiGithubFill,
-  RiFacebookCircleFill,
-  FaBloggerB,
-} from 'react-icons/all';
+import { Atom, Link, List, Icon } from 'components';
 
-const StraightUl = styled.ul`
+const StraightUl = styled(List)`
+  line-height: 0;
   margin: 0;
   padding: 0;
-  list-style: none;
 `;
 
-const List = styled.li`
-  padding: 0 25px 0 0;
+const ListItem = styled.li`
+  height: 100%;
+  padding-right: 25px;
+  align-items: center;
   vertical-align: middle;
   display: inline-block;
 `;
 
-const NavBut = styled(NavLink)`
+const NavBut = styled(Link)`
   font-size: 17px;
   text-decoration: none;
-
   color: #000000;
+
+  &:hover {
+    text-decoration: underline;
+    color: #555555;
+  }
 `;
 
-const LinkBut = styled.a`
-  color: #000000;
+const LinkText = styled(Atom)``;
+
+const LinkIcon = styled(Icon)`
+  margin: 0;
+  vertical-align: middle;
+
+  &:hover {
+    color: #555555;
+  }
 `;
 
 function StraightNavigation() {
   return (
     <StraightUl>
-      <List data-menuanchor="projects">
+      <ListItem>
         <NavBut
           to="/projects"
           activeStyle={{
             textDecoration: 'underline',
           }}
         >
-          Projects
+          <LinkText>Projects</LinkText>
         </NavBut>
-      </List>
-      <List>
+      </ListItem>
+      <ListItem>
         <NavBut
           to="/about"
           activeStyle={{
             textDecoration: 'underline',
           }}
         >
-          About/Contact
+          <LinkText>About/Contact</LinkText>
         </NavBut>
-      </List>
-      <List>
-        <LinkBut href="https://okdohyuk.tistory.com/" target="_blank">
-          <FaBloggerB />
-        </LinkBut>
-      </List>
-      <List>
-        <LinkBut href="https://github.com/okdohyuk" target="_blank">
-          <RiGithubFill />
-        </LinkBut>
-      </List>
-      <List>
-        <LinkBut href="https://www.facebook.com/okdohyuk" target="_blank">
-          <RiFacebookCircleFill />
-        </LinkBut>
-      </List>
+      </ListItem>
+      <ListItem>
+        <NavBut href="https://okdohyuk.tistory.com/" target="_blank">
+          <LinkIcon icon="blog" />
+        </NavBut>
+      </ListItem>
+      <ListItem>
+        <NavBut href="https://github.com/okdohyuk" target="_blank">
+          <LinkIcon icon="github" />
+        </NavBut>
+      </ListItem>
+      <ListItem>
+        <NavBut href="https://www.facebook.com/okdohyuk" target="_blank">
+          <LinkIcon icon="facebook" />
+        </NavBut>
+      </ListItem>
     </StraightUl>
   );
 }

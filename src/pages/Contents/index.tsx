@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { Paramtype } from 'lib/types/Board';
 
-import { ContentsTemplate, ContentsItem } from 'components';
+import { ContentsTemplate, ContentsItem, Footer } from 'components';
 
 function Contents() {
   let { id }: Paramtype = useParams();
@@ -22,6 +22,7 @@ function Contents() {
           github={board.github}
         />
       }
+      footer={<Footer />}
     />
   );
 }

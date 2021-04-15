@@ -10,21 +10,20 @@ import {
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { RiGithubFill } from 'react-icons/ri';
 
-import { HorizontalRule } from 'components';
+import { Block, Heading, Link, HorizontalRule } from 'components';
 
-const ContentsItemWrap = styled.div`
+const ContentsItemWrap = styled(Block)`
   max-width: 860px;
   margin: 100px auto 100px auto;
   padding: 0 15px;
 `;
 
-const HGroup = styled.div`
+const HGroup = styled(Block)`
   max-width: 860px;
   margin: 50px auto 60px;
-
 `;
 
-const Title = styled.h1`
+const Title = styled(Heading)`
   margin-bottom: 9px;
   display: block;
   font-weight: 700;
@@ -92,22 +91,24 @@ const CarouselMain = styled(CarouselProvider)`
 const Introduce = styled.div`
   margin: 25px 0;
   font-size: 20px;
+  line-height: 130%;
 `;
 
 const SliderWrap = styled.div`
   position: relative;
 `;
 
-const Text = styled.div`
+const Text = styled(Block)`
   margin: 25px 0;
+  line-height: 130%;
 `;
 
-const Github = styled.div`
+const Github = styled(Block)`
   margin-top: 100px;
   text-align: center;
 `;
 
-const GoGithub = styled.a``;
+const GoGithub = styled(Link)``;
 
 function ContentsItem({ title, logo, introduce, images, text, github }: any) {
   return (
@@ -147,7 +148,5 @@ function ContentsItem({ title, logo, introduce, images, text, github }: any) {
     </ContentsItemWrap>
   );
 }
-
-
 
 export default ContentsItem;

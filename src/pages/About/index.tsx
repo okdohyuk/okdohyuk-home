@@ -1,4 +1,4 @@
-import { AboutTemplate, Abouts, Skills, Contact } from 'components';
+import { AboutTemplate, Abouts, Skills, Contact, Footer } from 'components';
 
 function About() {
   document.title = `okdohyuk's home`;
@@ -7,6 +7,7 @@ function About() {
       abouts={<Abouts />}
       skills={<Skills />}
       contact={<Contact />}
+      footer={<Footer />}
     ></AboutTemplate>
   );
 }

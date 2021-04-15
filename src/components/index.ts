@@ -2,6 +2,7 @@ export { default as Atom } from './atoms/Atom';
 export { default as Block } from './atoms/Block';
 export { default as Heading } from './atoms/Heading';
 export { default as HorizontalRule } from './atoms/HorizontalRule';
+export { default as Icon } from './atoms/Icon';
 export { default as Link } from './atoms/Link';
 export { default as List } from './atoms/List';
 export { default as Paragraph } from './atoms/Paragraph';

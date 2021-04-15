@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { Block, Heading, Link } from 'components';
 
-const Wrapper = styled.div`
+const Wrapper = styled(Block)`
   min-width: 330px;
   display: flex;
   flex: 1;
@@ -10,12 +10,12 @@ const Wrapper = styled.div`
   align-self: center;
 `;
 
-const Name = styled.h1`
+const Name = styled(Heading)`
   font-size: 2.2em;
   font-weight: 700;
 `;
 
-const About = styled.div`
+const About = styled(Block)`
   margin: 10px 0;
   font-size: 1.7em;
 `;
@@ -40,7 +40,7 @@ function HomeAbout() {
       <About>
         열정있는 개발자 유도혁입니다,
         <br />
-        만나서 반갑습니다😃
+        만나서 반갑습니다!😃
       </About>
       <DetailLink to="/about">저에 대해서</DetailLink>
     </Wrapper>

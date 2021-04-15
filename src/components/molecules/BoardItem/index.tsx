@@ -79,7 +79,7 @@ const Introduce = styled(Atom)`
 function BoardItem({ id, logo, title, introduce }: any) {
   return (
     <BoardItemWrap>
-      <GoDetail href={`/contents/${id}`}>
+      <GoDetail to={`/contents/${id}`}>
         <LogoWrap>
           <Logo src={logo} />
         </LogoWrap>
