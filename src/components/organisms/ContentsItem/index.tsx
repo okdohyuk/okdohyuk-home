@@ -101,6 +101,11 @@ const SliderWrap = styled.div`
 const Text = styled(Block)`
   margin: 25px 0;
   line-height: 130%;
+
+  p,
+  h2 {
+    margin: 0;
+  }
 `;
 
 const Github = styled(Block)`

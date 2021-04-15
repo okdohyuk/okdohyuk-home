@@ -11,6 +11,7 @@ const Wrapper = styled(Block)`
 `;
 
 const Name = styled(Heading)`
+  margin: 0;
   font-size: 2.2em;
   font-weight: 700;
 `;
@@ -31,6 +32,11 @@ const DetailLink = styled(Link)`
   background-color: #3499db;
   color: #ffffff;
   font-size: 18px;
+
+  &:hover {
+    background-color: #3682e6;
+    transition-duration: 0.5s;
+  }
 `;
 
 function HomeAbout() {

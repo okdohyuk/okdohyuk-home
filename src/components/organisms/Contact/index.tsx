@@ -28,6 +28,7 @@ const Email = styled.button`
 
   &:hover {
     color: rgba(0, 0, 0, 0.3);
+    transition-duration: 0.2s;
   }
 `;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import MyProfile from 'lib/image/okdohyuk.jpeg';
-import { Block, Heading } from 'components';
+import { Block, Heading, Paragraph } from 'components';
 
 const AboutsWrap = styled(Block)`
   height: 100vh;
@@ -65,6 +65,8 @@ const AboutText = styled(Block)`
   }
 `;
 
+const Distance = styled(Paragraph)``;
+
 const ImgFigure = styled.figure<A>`
   width: 30rem;
   height: 40rem;
@@ -96,11 +98,11 @@ function Abouts() {
           <Title>열정 있는 개발자</Title>
           <AboutText>
             저는 프론트엔드 기술에 관심이 많은 유도혁입니다. 현재
-            한세사이버보안고등학교에 재학 중입니다.<p>&nbsp;</p>
-            저는 현재 전공 동아리인 시스템 보안연구동아리의 부장 및 전공 멘토로
-            동아리를 이끌고 있습니다.<p>&nbsp;</p>
-            저는 반응형 웹 개발에 있어서 진지한 열정을 가지고 있고 개발과 여러
-            자료를 학습하며 점점 성장하고 있습니다.
+            한세사이버보안고등학교에 재학 중입니다.<Distance>&nbsp;</Distance>
+            현재 전공 동아리인 시스템 보안연구동아리의 부장 및 전공 멘토로
+            동아리를 이끌고 있습니다.<Distance>&nbsp;</Distance>
+            반응형 웹 개발에 있어서 진지한 열정을 가지고 있고 개발과 여러 자료를
+            학습하며 점점 성장해나가고 있습니다.
           </AboutText>
         </TextWrap>
       </LeftWrap>
