@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { Paramtype } from 'lib/types/Board';
@@ -9,7 +10,11 @@ function Contents() {
   const board = useSelector((state: any) =>
     state.boards.find((board: any) => board.id === parseInt(id)),
   );
+  if (board === undefined) {
+    location.href = '/';
+  }
   document.title = `${board.title}`;
+
   return (
     <ContentsTemplate
       contentsitem={
