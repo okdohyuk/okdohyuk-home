@@ -67,23 +67,32 @@ const AboutText = styled(Block)`
 
 const Distance = styled(Paragraph)``;
 
-const ImgFigure = styled.figure<A>`
+const ImgFigure = styled.figure`
   width: 30rem;
   height: 40rem;
   overflow: hidden;
+  background-color: black;
+
+  @media screen and (max-width: 900px) {
+    width: 20rem;
+    height: 30rem;
+  }
+`;
+
+const Img = styled.img<ImgSrc>`
+  width: 100%;
+  height: 100%;
   background: url(${(props) => props.img});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
   @media screen and (max-width: 900px) {
-    width: 20rem;
-    height: 30rem;
     background-size: auto 30rem;
   }
 `;
 
-type A = {
+type ImgSrc = {
   img: string;
 };
 
@@ -91,7 +100,9 @@ function Abouts() {
   return (
     <AboutsWrap>
       <RightWrap>
-        <ImgFigure img={MyProfile}></ImgFigure>
+        <ImgFigure>
+          <Img img={MyProfile} />
+        </ImgFigure>
       </RightWrap>
       <LeftWrap>
         <TextWrap>

@@ -88,13 +88,13 @@ const CarouselMain = styled(CarouselProvider)`
   margin: 25px 0;
 `;
 
-const Introduce = styled.div`
+const Introduce = styled(Block)`
   margin: 25px 0;
   font-size: 20px;
   line-height: 130%;
 `;
 
-const SliderWrap = styled.div`
+const SliderWrap = styled(Block)`
   position: relative;
 `;
 
@@ -128,7 +128,7 @@ function ContentsItem({ title, logo, introduce, images, text, github }: any) {
       <Introduce>{introduce}</Introduce>
       <CarouselMain
         naturalSlideWidth={100}
-        naturalSlideHeight={60}
+        naturalSlideHeight={58}
         infinite={true}
         totalSlides={images.length}
       >
@@ -136,7 +136,7 @@ function ContentsItem({ title, logo, introduce, images, text, github }: any) {
           <Slider>
             {images.map((row: any) => (
               <Slide key={row.id} index={row.id}>
-                <Image src={row.image} />
+                <Image src={row.image} alt={row.image} />
               </Slide>
             ))}
           </Slider>

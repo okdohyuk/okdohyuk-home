@@ -1,10 +1,10 @@
-import logo from './doom_logo.png';
-import doom_1 from './doom_1.png';
-import doom_2 from './doom_2.png';
-import doom_3 from './doom_3.png';
-import doom_4 from './doom_4.png';
-import doom_5 from './doom_5.png';
-import doom_6 from './doom_6.png';
+import logo from './doom_logo.jpg';
+import doom_1 from './doom_1.jpeg';
+import doom_2 from './doom_2.jpeg';
+import doom_3 from './doom_3.jpeg';
+import doom_4 from './doom_4.jpeg';
+import doom_5 from './doom_5.jpeg';
+import doom_6 from './doom_6.jpeg';
 
 const doom = {
   id: 2,

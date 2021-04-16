@@ -1,11 +1,11 @@
-import logo from './ssr_logo.png';
-import ssr_1 from './ssr_1.png';
-import ssr_2 from './ssr_2.png';
-import ssr_3 from './ssr_3.png';
-import ssr_4 from './ssr_4.png';
-import ssr_5 from './ssr_5.png';
-import ssr_6 from './ssr_6.png';
-import ssr_7 from './ssr_7.png';
+import logo from './ssr_logo.jpg';
+import ssr_1 from './ssr_1.jpeg';
+import ssr_2 from './ssr_2.jpeg';
+import ssr_3 from './ssr_3.jpeg';
+import ssr_4 from './ssr_4.jpeg';
+import ssr_5 from './ssr_5.jpeg';
+import ssr_6 from './ssr_6.jpeg';
+import ssr_7 from './ssr_7.jpeg';
 
 const ssr = {
   id: 1,

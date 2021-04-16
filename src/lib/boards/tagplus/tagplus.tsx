@@ -1,5 +1,5 @@
 import logo from './tagplus_logo.jpg';
-import tagplus_1 from './tagplus_1.png';
+import tagplus_1 from './tagplus_1.jpg';
 
 const tagplus = {
   id: 3,
