@@ -17,6 +17,7 @@ const Board = styled(Block)`
 `;
 
 function BoardList({ boards }: any) {
+  console.log(boards);
   return (
     <Board>
       {boards.map((row: any) => (

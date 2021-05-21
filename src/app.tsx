@@ -1,12 +1,12 @@
 import React from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { Navigation } from 'components';
 import { Home, About, Projects, Contents, NotFound } from 'pages';
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Navigation />
       <Switch>
         <Route exact path="/" component={Home}></Route>
@@ -15,7 +15,7 @@ function App() {
         <Route path="/contents/:id" component={Contents}></Route>
         <Route component={NotFound}></Route>
       </Switch>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

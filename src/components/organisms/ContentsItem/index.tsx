@@ -116,6 +116,7 @@ const Github = styled(Block)`
 const GoGithub = styled(Link)``;
 
 function ContentsItem({ title, logo, introduce, images, text, github }: any) {
+  console.log(images.length);
   return (
     <ContentsItemWrap>
       <HGroup>
@@ -140,8 +141,14 @@ function ContentsItem({ title, logo, introduce, images, text, github }: any) {
               </Slide>
             ))}
           </Slider>
-          <BackBtn>〈</BackBtn>
-          <NextBtn>〉</NextBtn>
+          {images.length <= 1 ? (
+            ''
+          ) : (
+            <>
+              <BackBtn>〈</BackBtn>
+              <NextBtn>〉</NextBtn>
+            </>
+          )}
         </SliderWrap>
       </CarouselMain>
       <Text dangerouslySetInnerHTML={{ __html: text }}></Text>

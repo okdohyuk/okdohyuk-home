@@ -22,19 +22,19 @@ const About = styled(Block)`
 `;
 
 const DetailLink = styled(Link)`
-  width: 5.3em;
+  width: fit-content;
   padding: 7px;
   display: block;
   text-decoration: none;
   border-radius: 3px;
   border-width: 0;
   text-align: center;
-  background-color: #3499db;
+  background-color: rgba(52, 153, 219);
   color: #ffffff;
   font-size: 18px;
 
   &:hover {
-    background-color: #3682e6;
+    background-color: rgba(52, 153, 219, 0.8);
     transition-duration: 0.5s;
   }
 `;
@@ -44,7 +44,7 @@ function HomeAbout() {
     <Wrapper>
       <Name>유도혁</Name>
       <About>
-        열정있는 개발자 유도혁입니다,
+        열정있는 개발자 유도혁입니다.
         <br />
         만나서 반갑습니다!😃
       </About>

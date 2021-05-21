@@ -63,7 +63,6 @@ const ImgWrap = styled(Block)`
   padding: 1px;
   position: absolute;
   border-radius: 9000px;
-  background-color: black;
 `;
 
 const ImgFigure = styled.figure`
