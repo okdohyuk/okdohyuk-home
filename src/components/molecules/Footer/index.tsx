@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { Paragraph } from 'components';
 
 const FooterWrap = styled.footer`
-  position: relative;
   padding: 29px 0;
+  position: relative;
   bottom: 0;
   border-top: 1px solid #ebebeb;
 `;

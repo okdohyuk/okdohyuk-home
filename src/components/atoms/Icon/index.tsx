@@ -6,13 +6,13 @@ const fontSize = ({ width, height }: any) => {
 };
 
 const Wrapper = styled.span`
-  display: inline-block;
-  font-size: ${fontSize};
-  color: #000000;
   width: 1em;
   height: 1em;
   margin: 0.1em;
+  display: inline-block;
   box-sizing: border-box;
+  font-size: ${fontSize};
+  color: #000000;
 
   & > svg {
     width: 100%;

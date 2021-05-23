@@ -9,7 +9,6 @@ import {
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { RiGithubFill } from 'react-icons/ri';
-
 import { Block, Heading, Link, HorizontalRule } from 'components';
 
 const ContentsItemWrap = styled(Block)`
@@ -74,10 +73,11 @@ const NextBtn = styled(ButtonNext)`
   border: none;
   outline: none;
   background-color: rgba(0, 0, 0, 0.3);
-  color: #fff;
   font-size: 40px;
   font-weight: 900;
   line-height: 1;
+  color: #fff;
+
   @media screen and (max-width: 767px) {
     background-color: transparent;
     color: #7a7a7a;
@@ -116,7 +116,6 @@ const Github = styled(Block)`
 const GoGithub = styled(Link)``;
 
 function ContentsItem({ title, logo, introduce, images, text, github }: any) {
-  console.log(images.length);
   return (
     <ContentsItemWrap>
       <HGroup>

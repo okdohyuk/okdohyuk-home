@@ -7,13 +7,12 @@ const fontSize = ({ level }: any) =>
   `${0.75 + 1 * (1 / defaultSize(level))}rem`;
 
 const styles = css`
-  font-family: Nanum Gothic;
+  margin: 0.85714em 0 0.57142em 0;
   font-weight: 500;
+  font-family: Nanum Gothic;
   font-size: ${fontSize};
-  margin: 0;
-  margin-top: 0.85714em;
-  margin-bottom: 0.57142em;
 `;
+
 const Heading = styled(
   ({ level, children, reverse, palette, theme, ...props }) =>
     React.createElement(`h${defaultSize(level)}`, props, children),

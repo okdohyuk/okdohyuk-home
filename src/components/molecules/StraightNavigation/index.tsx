@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { Atom, Link, List, Icon } from 'components';
 
 const StraightUl = styled(List)`
-  line-height: 0;
   margin: 0;
   padding: 0;
+  line-height: 0;
 `;
 
 const ListItem = styled.li`
@@ -17,8 +17,8 @@ const ListItem = styled.li`
 `;
 
 const NavBut = styled(Link)`
-  font-size: 17px;
   text-decoration: none;
+  font-size: 17px;
   color: #000000;
 
   &:hover {

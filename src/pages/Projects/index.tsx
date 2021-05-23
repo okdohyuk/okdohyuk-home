@@ -3,8 +3,9 @@ import { ProjectsTemplate, BoardList, Footer } from 'components';
 import { BoardsState } from 'lib/types/Board';
 
 function Projects() {
-  document.title = `okdohyuk's home`;
   const boards = useSelector((state: BoardsState) => state.boards);
+
+  document.title = `okdohyuk's home`;
 
   return (
     <ProjectsTemplate

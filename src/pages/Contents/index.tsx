@@ -1,18 +1,20 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { Paramtype } from 'lib/types/Board';
-
 import { ContentsTemplate, ContentsItem, Footer } from 'components';
 
 function Contents() {
-  let { id }: Paramtype = useParams();
+  const { id }: Paramtype = useParams();
+
   const board = useSelector((state: any) =>
     state.boards.find((board: any) => board.id === parseInt(id)),
   );
+
   if (board === undefined) {
-    location.href = '/';
+    location.href = '/404';
   }
+
   document.title = `${board.title}`;
 
   return (

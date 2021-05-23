@@ -24,11 +24,11 @@ const Wrapper = styled(Block)`
   align-items: center;
   display: flex;
   overflow: hidden;
-  z-index: 99999;
+  z-index: 1;
 
   @media screen and (max-width: 1000px) {
-    min-width: 0;
     width: 19.3rem;
+    min-width: 0;
     height: 19.3rem;
     margin: 0 auto;
   }
@@ -71,7 +71,7 @@ const ImgFigure = styled.figure`
   margin: 0;
   border-radius: 9000px;
   overflow: hidden;
-  background-color: transparent;
+  background-color: #000;
 
   @media screen and (max-width: 1000px) {
     width: 18rem;

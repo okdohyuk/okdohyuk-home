@@ -14,19 +14,19 @@ const Header = styled.header`
 const LogoBtn = styled(Link)`
   padding-left: 25px;
   float: left;
+  vertical-align: middle;
   text-decoration: none;
   font-size: 18px;
   color: #000000;
-  vertical-align: middle;
 `;
 
 const Logo = styled(Atom)``;
 
 const Nav = styled.nav`
-  float: right;
   top: 0;
-  line-height: 0;
+  float: right;
   vertical-align: middle;
+  line-height: 0;
 `;
 
 function Navigation() {

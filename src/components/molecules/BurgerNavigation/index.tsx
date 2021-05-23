@@ -49,7 +49,7 @@ const LinkIcon = styled(Icon)`
   }
 `;
 
-var styles = {
+const BurgerStyles = {
   bmBurgerButton: {
     width: '20px',
     height: '18px',
@@ -87,7 +87,7 @@ var styles = {
 
 function BurgerNavigation() {
   return (
-    <Menu styles={styles} right>
+    <Menu styles={BurgerStyles} right>
       <ListWrap>
         <ListItem>
           <NavBut to="/projects">
