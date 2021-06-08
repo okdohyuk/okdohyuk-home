@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { palette } from 'styled-tools';
 
 const styles = css`
-  font-family: Nanum Gothic;
+  font-family: lucida grande, 나눔고딕, NanumGothic;
   text-decoration: none;
   font-weight: 500;
   color: ${palette('grayscale', 2)};

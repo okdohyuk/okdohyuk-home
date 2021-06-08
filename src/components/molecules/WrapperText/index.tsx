@@ -3,8 +3,9 @@ import { Atom } from 'components';
 
 const BackText = styled(Atom)`
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 50px;
+  left: 0px;
   z-index: -1;
   overflow: hidden;
   writing-mode: vertical-rl;
@@ -20,7 +21,7 @@ const BackText = styled(Atom)`
 
 const BackText2 = styled(Atom)`
   padding-left: 250px;
-  position: absolute;
+  position: fixed;
   overflow: hidden;
   bottom: 0;
   z-index: -1;

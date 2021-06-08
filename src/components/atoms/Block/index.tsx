@@ -4,7 +4,7 @@ const Block = styled.div`
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: Nanum Gothic;
+  font-family: lucida grande, 나눔고딕, NanumGothic;
   vertical-align: baseline;
 `;
 

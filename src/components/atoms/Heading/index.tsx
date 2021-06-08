@@ -9,7 +9,7 @@ const fontSize = ({ level }: any) =>
 const styles = css`
   margin: 0.85714em 0 0.57142em 0;
   font-weight: 500;
-  font-family: Nanum Gothic;
+  font-family: lucida grande, 나눔고딕, NanumGothic;
   font-size: ${fontSize};
 `;
 

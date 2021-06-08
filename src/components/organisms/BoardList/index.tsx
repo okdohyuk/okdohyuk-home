@@ -1,5 +1,7 @@
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Block, BoardItem } from 'components';
+import { BoardState, BoardS } from 'lib/types/Board';
 
 const Board = styled(Block)`
   max-width: 860px;
@@ -15,15 +17,17 @@ const Board = styled(Block)`
 `;
 
 function BoardList({ boards }: any) {
+  const [tempBoards] = useState<BoardState>(boards);
+
   return (
     <Board>
-      {boards.map((row: any) => (
+      {tempBoards.map(({ id, logo, title, introduce }: BoardS) => (
         <BoardItem
-          key={row.id}
-          id={row.id}
-          logo={row.logo}
-          title={row.title}
-          introduce={row.introduce}
+          key={id}
+          id={id}
+          logo={logo}
+          title={title}
+          introduce={introduce}
         />
       ))}
     </Board>

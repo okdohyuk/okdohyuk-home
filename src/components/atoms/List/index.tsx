@@ -5,7 +5,7 @@ const styles = css`
   margin: 1rem 0;
   padding-left: 1.6rem;
   line-height: 1.7rem;
-  font-family: Nanum Gothic;
+  font-family: lucida grande, 나눔고딕, NanumGothic;
 `;
 
 const Ol = styled.ol`
